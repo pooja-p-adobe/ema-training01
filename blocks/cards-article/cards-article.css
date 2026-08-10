@@ -1,0 +1,79 @@
+/* cards-article — WKND "Recent Articles" image-list
+ * Values extracted from source clientlib CSS (.cmp-image-list) on
+ * https://wknd.site/us/en.html
+ */
+
+.cards-article > ul {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.cards-article > ul > li {
+  box-sizing: content-box;
+  flex-basis: 260px;
+  margin: 0 0 32px;
+  padding-right: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.cards-article .cards-article-card-image {
+  line-height: 0;
+}
+
+.cards-article .cards-article-card-image img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cards-article .cards-article-card-body {
+  margin: 0;
+}
+
+.cards-article .cards-article-card-title:any-link {
+  display: inline-block;
+  margin: 0;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.cards-article .cards-article-card-title:hover {
+  text-decoration: none;
+}
+
+.cards-article .cards-article-card-description {
+  width: 260px;
+  max-width: 100%;
+  margin-top: 16px;
+  overflow: hidden;
+  color: dimgray;
+  font-size: 14px;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (width >= 768px) {
+  .cards-article > ul {
+    justify-content: flex-start;
+  }
+
+  .cards-article > ul > li {
+    padding-right: 14px;
+  }
+}

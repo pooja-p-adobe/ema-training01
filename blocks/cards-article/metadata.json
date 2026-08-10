@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-article",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-10T13:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en.html",
+    "originPage": "WKND homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "article",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title + description",
+    "buttonCount": 0,
+    "imageCount": 1,
+    "gridColumns": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "article/magazine preview grids",
+      "editorial content listings with thumbnail + title + summary",
+      "recent posts / related reading sections"
+    ],
+    "notSuitableFor": [
+      "text-only card grids (use cards no-images)",
+      "product/destination galleries with different styling (use cards-gallery)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/us/en"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-10T13:30:00.000Z"
+  }
+}

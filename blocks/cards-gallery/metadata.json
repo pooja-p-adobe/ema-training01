@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-gallery",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-10T13:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en.html",
+    "originPage": "WKND homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "gallery",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title + description",
+    "buttonCount": 0,
+    "imageCount": 1,
+    "gridColumns": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "adventure/trip/destination galleries",
+      "product or experience listing grids with image + title + description",
+      "'where do you want to go' style discovery sections"
+    ],
+    "notSuitableFor": [
+      "text-only card grids (use cards no-images)",
+      "editorial article previews with distinct styling (use cards-article)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/us/en"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-10T13:30:00.000Z"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "wknd-homepage",
+      "urls": [
+        "https://wknd.site/us/en.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND homepage (AEM Core Components / WKND reference site). Contains: site header nav (experience fragment), hero carousel with 3 slides, featured article teaser (Camping in Western Australia), Recent Articles section with 4 article cards + CTA, hero teaser image-bottom (Climbing New Zealand adventure), Next Adventures section with 4 adventure cards + CTA, site footer (experience fragment) with logo, footer nav, social links and copyright.",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            ".carousel.cmp-carousel--hero"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            ".teaser.cmp-teaser--featured"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            "main.cmp-layout-container--fixed:nth-of-type(1) div.image-list.list"
+          ]
+        },
+        {
+          "name": "hero-overlay",
+          "instances": [
+            ".teaser.cmp-teaser--hero.cmp-teaser--imagebottom"
+          ]
+        },
+        {
+          "name": "cards-gallery",
+          "instances": [
+            "main.cmp-layout-container--fixed:nth-of-type(2) div.image-list.list"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Carousel",
+          "selector": ".carousel.cmp-carousel--hero",
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Featured Article",
+          "selector": ".teaser.cmp-teaser--featured",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Recent Articles",
+          "selector": "main.cmp-layout-container--fixed:nth-of-type(1) div.image-list.list",
+          "style": null,
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline",
+            "div.button.cmp-button--primary"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Next Adventures Banner",
+          "selector": ".teaser.cmp-teaser--hero.cmp-teaser--imagebottom",
+          "style": null,
+          "blocks": [
+            "hero-overlay"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Adventures Gallery",
+          "selector": "main.cmp-layout-container--fixed:nth-of-type(2) div.image-list.list",
+          "style": null,
+          "blocks": [
+            "cards-gallery"
+          ],
+          "defaultContent": [
+            "div.title",
+            "div.button.cmp-button--primary"
+          ]
+        }
+      ]
+    }
+  ]
+}
