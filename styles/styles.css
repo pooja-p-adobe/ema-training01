@@ -284,3 +284,13 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* WKND section-heading yellow underline accent (default content only) */
+main .default-content-wrapper > h2:first-child::after,
+main .default-content-wrapper > h3:first-child::after {
+  content: '';
+  display: block;
+  width: 84px;
+  margin-top: 12px;
+  border-bottom: 2px solid var(--wknd-cta-bg);
+}
