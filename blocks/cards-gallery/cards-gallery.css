@@ -35,8 +35,7 @@
 .cards-gallery > ul > li img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 13 / 10;
+  height: 200px;
   object-fit: cover;
 }
 
