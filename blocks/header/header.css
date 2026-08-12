@@ -224,7 +224,7 @@ header nav .nav-hamburger-icon::after {
 @media (width >= 900px) {
   header nav {
     grid-template:
-      'tools tools tools' 40px
+      'tools tools tools' 25px
       'brand sections search' auto / auto 1fr auto;
     column-gap: 40px;
     padding: 0 40px;
@@ -236,7 +236,7 @@ header nav .nav-hamburger-icon::after {
 
   header nav .nav-brand {
     height: auto;
-    padding: 28px 0;
+    padding: 50px 0;
   }
 
   header nav .nav-sections {
@@ -264,7 +264,7 @@ header nav .nav-hamburger-icon::after {
     width: auto;
     margin: 0 -40px;
     padding: 0 40px;
-    height: 40px;
+    height: 25px;
   }
 }
 
