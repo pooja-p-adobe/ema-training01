@@ -1,0 +1,45 @@
+{
+  "variantName": "cards-profile",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-12T08:15:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en/about-us.html",
+    "originPage": "WKND About Us (team page)",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "team",
+    "imagePattern": "portrait"
+  },
+  "contentPattern": {
+    "structure": "image + name + role + social links",
+    "buttonCount": 0,
+    "imageCount": 1,
+    "socialLinkCount": 3,
+    "gridColumns": "responsive (4-up / 3-up, wraps)",
+    "imageShape": "circle"
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "team / staff / contributor profile grids",
+      "'meet the team' or 'our people' sections",
+      "person cards with circular portrait + name + role subtitle + social icon row",
+      "author / guide / speaker directories"
+    ],
+    "notSuitableFor": [
+      "editorial article preview grids (use cards-article)",
+      "destination/trip discovery galleries (use cards-gallery)",
+      "members-only locked teasers with a Read More CTA (use cards-teaser)",
+      "text-only card grids (use cards no-images)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/us/en/about-us"],
+    "reuseCount": 1,
+    "instancesOnPage": 2,
+    "lastUsed": "2026-08-12T08:15:00.000Z"
+  }
+}

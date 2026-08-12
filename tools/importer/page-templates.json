@@ -276,6 +276,47 @@
           ]
         }
       ]
+    },
+    {
+      "name": "wknd-about-us",
+      "urls": [
+        "https://wknd.site/us/en/about-us.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND About Us team page. Contains: H1 'About Us' title (default content), 'Our Contributors' section (h2 + intro + 4 person cards) and 'WKND Guides' section (h2 + intro + 3 person cards). Each person card = image + name (h3) + role (h5) + 3 social links (Facebook/Twitter/Instagram) — NEW cards-profile variant.",
+      "blocks": [
+        {
+          "name": "cards-profile",
+          "instances": [
+            "section.cmp-experience-fragment--contributor"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "about-section-1",
+          "name": "About Us Title",
+          "selector": "main.cmp-layout-container--fixed div.title:not(.cmp-title--underline)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.title"
+          ]
+        },
+        {
+          "id": "about-section-2",
+          "name": "Contributors + Guides",
+          "selector": "section.cmp-experience-fragment--contributor",
+          "style": null,
+          "blocks": [
+            "cards-profile"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline",
+            "div.text.cmp-text--font-small"
+          ]
+        }
+      ]
     }
   ]
 }
