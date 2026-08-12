@@ -94,10 +94,19 @@ export default async function decorate(block) {
     }
   }
 
-  // tools: append a search form after the sign-in/language list
-  const navTools = nav.querySelector('.nav-tools');
-  if (navTools) {
-    navTools.append(buildSearch());
+  // search: add as a direct child of nav so it occupies the `search` grid
+  // area in the white main bar (right of the nav links), NOT the black bar
+  const navSearch = buildSearch();
+  nav.append(navSearch);
+
+  // highlight the nav link matching the current page
+  const navSectionsEl = nav.querySelector('.nav-sections');
+  if (navSectionsEl) {
+    const here = window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '');
+    navSectionsEl.querySelectorAll('a').forEach((a) => {
+      const href = new URL(a.href, window.location).pathname.replace(/\.html$/, '').replace(/\/$/, '');
+      if (href && here.endsWith(href)) a.closest('li').classList.add('nav-active');
+    });
   }
 
   // hamburger for mobile
