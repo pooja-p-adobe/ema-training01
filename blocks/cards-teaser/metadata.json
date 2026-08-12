@@ -1,0 +1,41 @@
+{
+  "variantName": "cards-teaser",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-12T05:47:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en/magazine.html",
+    "originPage": "WKND Magazine",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "teaser",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "title + description + CTA + image",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "gridColumns": 2,
+    "imagePosition": "below-text"
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "members-only / locked teaser groups (title + short description + Read More)",
+      "promotional teaser pairs with a CTA and image below the text",
+      "'sign in to unlock' style secure content previews"
+    ],
+    "notSuitableFor": [
+      "editorial article preview grids with image-top and no CTA (use cards-article)",
+      "destination/trip discovery galleries (use cards-gallery)",
+      "single side-by-side featured image + text promotions (use columns-feature)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/us/en/magazine"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-12T05:47:00.000Z"
+  }
+}

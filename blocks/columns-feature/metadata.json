@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-08-10T13:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en.html",
+    "originPage": "WKND homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "grey",
+    "density": "spacious",
+    "purpose": "feature",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + pretitle + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "columns": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "featured article teasers",
+      "single side-by-side image + text promotions",
+      "spotlight/feature callouts on a contained card"
+    ],
+    "notSuitableFor": [
+      "repeating item grids (use cards)",
+      "full-bleed hero banners (use hero)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/us/en", "/us/en/magazine", "/us/en/adventures"],
+    "reuseCount": 3,
+    "lastUsed": "2026-08-12T06:40:00.000Z"
+  }
+}

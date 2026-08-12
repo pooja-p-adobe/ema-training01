@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "wknd-homepage",
+      "urls": [
+        "https://wknd.site/us/en.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND homepage (AEM Core Components / WKND reference site). Contains: site header nav (experience fragment), hero carousel with 3 slides, featured article teaser (Camping in Western Australia), Recent Articles section with 4 article cards + CTA, hero teaser image-bottom (Climbing New Zealand adventure), Next Adventures section with 4 adventure cards + CTA, site footer (experience fragment) with logo, footer nav, social links and copyright.",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            ".carousel.cmp-carousel--hero"
+          ]
+        },
+        {
+          "name": "columns-feature",
+          "instances": [
+            ".teaser.cmp-teaser--featured"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            "main.cmp-layout-container--fixed:nth-of-type(1) div.image-list.list"
+          ]
+        },
+        {
+          "name": "hero-overlay",
+          "instances": [
+            ".teaser.cmp-teaser--hero.cmp-teaser--imagebottom"
+          ]
+        },
+        {
+          "name": "cards-gallery",
+          "instances": [
+            "main.cmp-layout-container--fixed:nth-of-type(2) div.image-list.list"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Carousel",
+          "selector": ".carousel.cmp-carousel--hero",
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Featured Article",
+          "selector": ".teaser.cmp-teaser--featured",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Recent Articles",
+          "selector": "main.cmp-layout-container--fixed:nth-of-type(1) div.image-list.list",
+          "style": null,
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline",
+            "div.button.cmp-button--primary"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Next Adventures Banner",
+          "selector": ".teaser.cmp-teaser--hero.cmp-teaser--imagebottom",
+          "style": null,
+          "blocks": [
+            "hero-overlay"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Adventures Gallery",
+          "selector": "main.cmp-layout-container--fixed:nth-of-type(2) div.image-list.list",
+          "style": null,
+          "blocks": [
+            "cards-gallery"
+          ],
+          "defaultContent": [
+            "div.title",
+            "div.button.cmp-button--primary"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wknd-magazine",
+      "urls": [
+        "https://wknd.site/us/en/magazine.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND Magazine article-listing page. Contains: H1 'Magazine' title (default content), Featured Article teaser (2-col image+text, reuses columns-feature), 'All Articles' heading + 5-article card grid (reuses cards-article), 'Members Only' heading + intro paragraph + 2 locked teaser cards (Alaskan Adventure, Fly Fishing the Amazon).",
+      "blocks": [
+        {
+          "name": "columns-feature",
+          "instances": [
+            ".teaser.cmp-teaser--featured"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            ".image-list.list"
+          ]
+        },
+        {
+          "name": "cards-teaser",
+          "instances": [
+            ".teaser.cmp-teaser--secure"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "mag-section-1",
+          "name": "Magazine Title",
+          "selector": "main.cmp-layout-container--fixed div.title:not(.cmp-title--underline)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.title"
+          ]
+        },
+        {
+          "id": "mag-section-2",
+          "name": "Featured Article",
+          "selector": ".teaser.cmp-teaser--featured",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "mag-section-3",
+          "name": "All Articles",
+          "selector": ".image-list.list",
+          "style": null,
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline"
+          ]
+        },
+        {
+          "id": "mag-section-4",
+          "name": "Members Only",
+          "selector": ".teaser.cmp-teaser--secure",
+          "style": null,
+          "blocks": [
+            "cards-teaser"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline",
+            "div.text"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wknd-adventures",
+      "urls": [
+        "https://wknd.site/us/en/adventures.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND Adventures listing page. Contains: H1 'Adventures' title (default content), an intro hero teaser ('Experience the world with us' — heading + text + image, reuses columns-feature), 'Current Adventures' heading, and a tabbed filter (All/Climbing/Cycling/Skiing/Surfing/Travel) wrapping a large adventure card grid (~13 cards, filterable by category) — NEW tabs-adventures variant.",
+      "blocks": [
+        {
+          "name": "columns-feature",
+          "instances": [
+            ".teaser.cmp-teaser--hero"
+          ]
+        },
+        {
+          "name": "tabs-adventures",
+          "instances": [
+            ".tabs.panelcontainer"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "adv-section-1",
+          "name": "Adventures Title",
+          "selector": "main.cmp-layout-container--fixed div.title",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.title"
+          ]
+        },
+        {
+          "id": "adv-section-2",
+          "name": "Intro Teaser",
+          "selector": ".teaser.cmp-teaser--hero",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "adv-section-3",
+          "name": "Current Adventures Tabs",
+          "selector": ".tabs.panelcontainer",
+          "style": null,
+          "blocks": [
+            "tabs-adventures"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wknd-faqs",
+      "urls": [
+        "https://wknd.site/us/en/faqs.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND FAQs page. Contains: H1 'FAQs' title + hero image + intro paragraph (default content), an accordion of 7 Q&A items (collapsible) — NEW accordion-faq variant, and a 'Need more help?' heading + contact paragraph with phone/email links (default content).",
+      "blocks": [
+        {
+          "name": "accordion-faq",
+          "instances": [
+            ".accordion.panelcontainer"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "faq-section-1",
+          "name": "FAQ Content",
+          "selector": ".accordion.panelcontainer",
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            "main div.title",
+            "div.image",
+            "div.text"
+          ]
+        },
+        {
+          "id": "faq-section-2",
+          "name": "Need More Help",
+          "selector": "div.title.cmp-title--underline",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.title.cmp-title--underline",
+            "div.text"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "wknd-about-us",
+      "urls": [
+        "https://wknd.site/us/en/about-us.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND About Us team page. Contains: H1 'About Us' title (default content), 'Our Contributors' section (h2 + intro + 4 person cards) and 'WKND Guides' section (h2 + intro + 3 person cards). Each person card = image + name (h3) + role (h5) + 3 social links (Facebook/Twitter/Instagram) — NEW cards-profile variant.",
+      "blocks": [
+        {
+          "name": "cards-profile",
+          "instances": [
+            "section.cmp-experience-fragment--contributor"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "about-section-1",
+          "name": "About Us Title",
+          "selector": "main.cmp-layout-container--fixed div.title:not(.cmp-title--underline)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.title"
+          ]
+        },
+        {
+          "id": "about-section-2",
+          "name": "Contributors + Guides",
+          "selector": "section.cmp-experience-fragment--contributor",
+          "style": null,
+          "blocks": [
+            "cards-profile"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline",
+            "div.text.cmp-text--font-small"
+          ]
+        }
+      ]
+    }
+  ]
+}

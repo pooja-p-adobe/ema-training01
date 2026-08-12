@@ -1,0 +1,92 @@
+/*
+ * hero-overlay — WKND "Climbing New Zealand" adventure banner.
+ * Source: cmp-teaser--hero.cmp-teaser--imagebottom on https://wknd.site/us/en.html
+ * Full-bleed image with a white content box pulled up to overlap the image's
+ * lower edge (desktop) / stacked below the image (mobile).
+ *
+ * Decorated DOM:
+ *   .hero-overlay.block
+ *     > div > div > picture > img     (image row)
+ *     > div > div > h2, p, p > a      (white text box row)
+ */
+
+/* full-bleed: escape the section's 1200px max-width + side padding.
+   Specificity must beat global `main > .section > div`. */
+.hero-overlay-container .hero-overlay-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  padding: 0;
+}
+
+/* reset authored row/cell spacing */
+.hero-overlay > div,
+.hero-overlay > div > div {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- image row (full-bleed) --- */
+.hero-overlay picture {
+  display: block;
+  width: 100%;
+  line-height: 0;
+}
+
+.hero-overlay img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: 50% 100%;
+}
+
+/* --- typography (source computed styles) --- */
+.hero-overlay h2 {
+  margin: 18px 0 0;
+  font-family: var(--heading-font-family);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 54px;
+  color: var(--text-color);
+}
+
+.hero-overlay p {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 31.5px;
+  color: var(--text-color);
+}
+
+/* CTA (buttonized in JS; inherits global WKND yellow .button) */
+.hero-overlay .button-wrapper {
+  margin: 18px 0;
+}
+
+/* --- white content box row --- */
+.hero-overlay > div:last-child {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  max-width: 1192px;
+  margin: 0 auto;
+  padding: 0 14px;
+  background-color: var(--background-color);
+}
+
+@media (width >= 900px) {
+  .hero-overlay img {
+    height: 640px;
+  }
+
+  /* pull the white box up to overlap the image's lower edge */
+  .hero-overlay > div:last-child {
+    min-height: 180px;
+    margin-top: -180px;
+    padding: 0 28px;
+  }
+}
