@@ -62,8 +62,8 @@
   margin: 18px 0 0;
 }
 
-/* ===== DESKTOP: side-by-side, image left ===== */
-@media (width >= 900px) {
+/* ===== TABLET+ : side-by-side, image left (source goes 2-col at 768px) ===== */
+@media (width >= 768px) {
   .columns-feature > div {
     flex-direction: row;
     align-items: stretch;

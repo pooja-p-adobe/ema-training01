@@ -92,9 +92,9 @@
   text-decoration: none;
 }
 
-/* two teasers side-by-side from desktop up; each ~360px wide, left-aligned,
-   28px gap (source: cmp1 right 512 -> cmp2 left 540) */
-@media (width >= 900px) {
+/* two teasers side-by-side from tablet up (source stays 2-up at 768px, stacks
+   only below); each ~360px wide, left-aligned, 28px gap */
+@media (width >= 768px) {
   .cards-teaser > ul {
     grid-template-columns: repeat(2, minmax(0, 360px));
     justify-content: start;
