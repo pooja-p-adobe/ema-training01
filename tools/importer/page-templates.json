@@ -233,6 +233,49 @@
           ]
         }
       ]
+    },
+    {
+      "name": "wknd-faqs",
+      "urls": [
+        "https://wknd.site/us/en/faqs.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND FAQs page. Contains: H1 'FAQs' title + hero image + intro paragraph (default content), an accordion of 7 Q&A items (collapsible) — NEW accordion-faq variant, and a 'Need more help?' heading + contact paragraph with phone/email links (default content).",
+      "blocks": [
+        {
+          "name": "accordion-faq",
+          "instances": [
+            ".accordion.panelcontainer"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "faq-section-1",
+          "name": "FAQ Content",
+          "selector": ".accordion.panelcontainer",
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": [
+            "main div.title",
+            "div.image",
+            "div.text"
+          ]
+        },
+        {
+          "id": "faq-section-2",
+          "name": "Need More Help",
+          "selector": "div.title.cmp-title--underline",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.title.cmp-title--underline",
+            "div.text"
+          ]
+        }
+      ]
     }
   ]
 }
