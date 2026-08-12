@@ -1,0 +1,103 @@
+/* cards-teaser — WKND "Members Only" locked/secure teasers.
+ * Source: .teaser.cmp-teaser--secure on https://wknd.site/us/en/magazine.html
+ * Two locked teaser cards side-by-side (2-up on desktop, stacking on mobile).
+ * Each card: TEXT on top (title, description, "Read More" grey CTA bar) with the
+ * IMAGE below it. The "Read More" CTA is locked plain text (no link) rendered as
+ * a static grey label bar — NOT the site yellow button.
+ * All values extracted from source computed styles at 1440px.
+ */
+
+.cards-teaser > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.cards-teaser > ul > li {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  max-width: 360px;
+  background-color: transparent;
+  border: 0;
+}
+
+/* text first, image below (source secure-teaser ordering) */
+.cards-teaser .cards-teaser-card-body {
+  order: 0;
+  margin: 0;
+}
+
+.cards-teaser .cards-teaser-card-image {
+  order: 1;
+  line-height: 0;
+}
+
+/* EDS wraps bare pictures in <p>; strip its default margin */
+.cards-teaser .cards-teaser-card-image p {
+  margin: 0;
+}
+
+.cards-teaser .cards-teaser-card-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 5; /* source image 360 x 200 */
+  object-fit: cover;
+  object-position: center;
+  margin: 7px 0;
+}
+
+/* title — Source Sans Pro (body font), NOT the Asar heading font */
+.cards-teaser .cards-teaser-card-title {
+  margin: 9px 0;
+  color: var(--text-color); /* #202020 */
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5; /* 27px */
+  text-transform: uppercase;
+}
+
+.cards-teaser .cards-teaser-card-description {
+  margin: 0 0 13.5px;
+  color: #696969; /* dimgray */
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75; /* 24.5px */
+  text-transform: uppercase;
+}
+
+/* "Read More" locked CTA — grey bar, shrinks to text (not full width) */
+.cards-teaser .cards-teaser-card-cta {
+  display: inline-block;
+  margin: 14px 0;
+  padding: 7px 14px;
+  background-color: #ebebeb;
+  color: #696969;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5; /* 21px */
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* if a locked teaser ever ships a real link, keep the same static look */
+.cards-teaser .cards-teaser-card-cta-link:any-link {
+  color: #696969;
+  text-decoration: none;
+}
+
+/* two teasers side-by-side from desktop up; each ~360px wide, left-aligned,
+   28px gap (source: cmp1 right 512 -> cmp2 left 540) */
+@media (width >= 900px) {
+  .cards-teaser > ul {
+    grid-template-columns: repeat(2, minmax(0, 360px));
+    justify-content: start;
+    gap: 28px;
+  }
+}

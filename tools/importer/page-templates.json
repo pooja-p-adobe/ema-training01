@@ -102,6 +102,81 @@
           ]
         }
       ]
+    },
+    {
+      "name": "wknd-magazine",
+      "urls": [
+        "https://wknd.site/us/en/magazine.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND Magazine article-listing page. Contains: H1 'Magazine' title (default content), Featured Article teaser (2-col image+text, reuses columns-feature), 'All Articles' heading + 5-article card grid (reuses cards-article), 'Members Only' heading + intro paragraph + 2 locked teaser cards (Alaskan Adventure, Fly Fishing the Amazon).",
+      "blocks": [
+        {
+          "name": "columns-feature",
+          "instances": [
+            ".teaser.cmp-teaser--featured"
+          ]
+        },
+        {
+          "name": "cards-article",
+          "instances": [
+            ".image-list.list"
+          ]
+        },
+        {
+          "name": "cards-teaser",
+          "instances": [
+            ".teaser.cmp-teaser--secure"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "mag-section-1",
+          "name": "Magazine Title",
+          "selector": "main.cmp-layout-container--fixed div.title:not(.cmp-title--underline)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.title"
+          ]
+        },
+        {
+          "id": "mag-section-2",
+          "name": "Featured Article",
+          "selector": ".teaser.cmp-teaser--featured",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "mag-section-3",
+          "name": "All Articles",
+          "selector": ".image-list.list",
+          "style": null,
+          "blocks": [
+            "cards-article"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline"
+          ]
+        },
+        {
+          "id": "mag-section-4",
+          "name": "Members Only",
+          "selector": ".teaser.cmp-teaser--secure",
+          "style": null,
+          "blocks": [
+            "cards-teaser"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline",
+            "div.text"
+          ]
+        }
+      ]
     }
   ]
 }
