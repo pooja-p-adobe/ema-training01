@@ -1,20 +1,149 @@
+/* ============================================================
+   WKND footer — dark bar with logo, nav, social, legal text
+   ============================================================ */
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--text-color);
+  color: #ebebeb;
+  font-family: var(--body-font-family);
 }
 
 footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 40px 40px 48px;
 }
 
 footer .footer p {
-  margin: 0;
+  margin: 0 0 13.5px;
 }
 
+footer .footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer a {
+  color: #ebebeb;
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  color: #fff;
+}
+
+/* ---------- Top row: brand | nav | social ---------- */
+footer .footer .footer-brand,
+footer .footer .footer-nav,
+footer .footer .footer-social {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer .footer .footer-brand img {
+  width: 128px;
+  height: auto;
+  display: block;
+}
+
+footer .footer .footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+footer .footer .footer-nav a {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Follow Us + social icons ---------- */
+footer .footer .footer-social h4 {
+  margin: 0 0 12px;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #ebebeb;
+}
+
+footer .footer .footer-social ul.footer-social {
+  display: flex;
+  gap: 4px;
+}
+
+footer .footer .footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #ebebeb;
+  color: var(--text-color);
+  transition: background-color 0.2s ease;
+}
+
+footer .footer .footer-social-link:hover {
+  background-color: #fff;
+}
+
+footer .footer .footer-social-link::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: currentcolor;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+footer .footer .footer-social-link-facebook::before {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>');
+}
+
+footer .footer .footer-social-link-twitter::before {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 5.9c-.7.32-1.5.53-2.3.63.83-.5 1.46-1.28 1.76-2.22-.78.46-1.64.8-2.56.98a4.03 4.03 0 0 0-6.86 3.67A11.44 11.44 0 0 1 3.7 4.7a4.03 4.03 0 0 0 1.25 5.38c-.65-.02-1.26-.2-1.8-.5v.05a4.03 4.03 0 0 0 3.23 3.95c-.6.16-1.23.18-1.82.07a4.03 4.03 0 0 0 3.76 2.8A8.09 8.09 0 0 1 2 18.13a11.42 11.42 0 0 0 6.18 1.81c7.42 0 11.48-6.15 11.48-11.48v-.52A8.2 8.2 0 0 0 22 5.9z"/></svg>');
+}
+
+footer .footer .footer-social-link-instagram::before {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm0 8.74a3.44 3.44 0 1 0 0-6.88 3.44 3.44 0 0 0 0 6.88zm6.75-8.94a1.24 1.24 0 1 1-2.48 0 1.24 1.24 0 0 1 2.48 0z"/></svg>');
+}
+
+/* ---------- Legal / attribution text ---------- */
+footer .footer .footer-legal {
+  margin-top: 32px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer .footer .footer-legal a {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   Desktop layout (>= 900px): top row single line, social right
+   ============================================================ */
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer .footer-brand {
+    margin-right: 56px;
+  }
+
+  footer .footer .footer-social {
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  footer .footer .footer-social h4 {
+    margin: 0;
+  }
+
+  footer .footer .footer-legal {
+    clear: both;
   }
 }
