@@ -161,11 +161,14 @@ header nav .nav-sections a {
   padding: 12px 0;
 }
 
-header nav .nav-sections a:hover {
-  color: var(--link-color);
+/* hover/focus — WKND yellow box (matches source .cmp-navigation__item-link:hover) */
+header nav .nav-sections a:hover,
+header nav .nav-sections a:focus-visible {
+  background-color: var(--wknd-cta-bg);
+  color: var(--text-color);
 }
 
-/* active page highlight — WKND yellow box */
+/* active page highlight — same WKND yellow box */
 header nav .nav-sections .nav-active a {
   background-color: var(--wknd-cta-bg);
   color: var(--text-color);
@@ -268,17 +271,14 @@ header nav .nav-hamburger-icon::after {
   header nav .nav-sections ul {
     flex-direction: row;
     align-items: center;
-    gap: 44px;
+    gap: 12px;
   }
 
+  /* every link is a hover target box (source: .cmp-navigation__item-link
+     padding 15px 17px); negative vertical margin keeps the row height aligned */
   header nav .nav-sections a {
-    padding: 0;
-  }
-
-  /* active page: yellow box with breathing room, negative margin keeps row aligned */
-  header nav .nav-sections .nav-active a {
-    padding: 18px 24px;
-    margin: -18px 0;
+    padding: 15px 17px;
+    margin: -15px 0;
   }
 
   header nav .nav-search {
