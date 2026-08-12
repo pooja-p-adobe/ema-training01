@@ -48,7 +48,7 @@ header nav .nav-tools {
   justify-content: flex-end;
   align-items: center;
   gap: 28px;
-  height: 40px;
+  height: 44px;
   padding: 0 28px;
   background-color: var(--text-color);
 }
@@ -80,6 +80,17 @@ header nav .nav-tools img {
   width: 22px;
   height: auto;
   display: block;
+}
+
+/* dropdown chevron after the language selector (EN-US ⌄) */
+header nav .nav-tools a[href="#lang"]::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  margin-left: 2px;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  transform: translateY(-2px) rotate(45deg);
 }
 
 /* search form (built in JS) hidden on mobile, shown in white bar on desktop */
@@ -208,13 +219,13 @@ header nav .nav-hamburger-icon::after {
 
 @media (width < 900px) {
   header nav {
-    padding-top: 36px;
+    padding-top: 44px;
   }
 
   header nav .nav-tools {
     gap: 18px;
     padding: 0 16px;
-    height: 36px;
+    height: 44px;
   }
 }
 
@@ -224,7 +235,7 @@ header nav .nav-hamburger-icon::after {
 @media (width >= 900px) {
   header nav {
     grid-template:
-      'tools tools tools' 25px
+      'tools tools tools' 44px
       'brand sections search' auto / auto 1fr auto;
     column-gap: 40px;
     padding: 0 40px;
@@ -264,7 +275,7 @@ header nav .nav-hamburger-icon::after {
     width: auto;
     margin: 0 -40px;
     padding: 0 40px;
-    height: 25px;
+    height: 44px;
   }
 }
 
