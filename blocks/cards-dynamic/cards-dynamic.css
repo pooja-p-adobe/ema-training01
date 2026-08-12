@@ -1,0 +1,79 @@
+/* cards-dynamic — query-index-driven article cards.
+ * Mirrors cards-article (WKND "All Articles" image-list) styling so the
+ * dynamic list is visually identical to the static one.
+ */
+
+.cards-dynamic > ul {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.cards-dynamic > ul > li {
+  box-sizing: content-box;
+  flex-basis: 260px;
+  margin: 0 0 32px;
+  padding-right: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.cards-dynamic .cards-dynamic-card-image {
+  line-height: 0;
+}
+
+.cards-dynamic .cards-dynamic-card-image img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cards-dynamic .cards-dynamic-card-body {
+  margin: 0;
+}
+
+.cards-dynamic .cards-dynamic-card-title:any-link {
+  display: inline-block;
+  margin: 0;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.cards-dynamic .cards-dynamic-card-title:hover {
+  text-decoration: none;
+}
+
+.cards-dynamic .cards-dynamic-card-description {
+  width: 260px;
+  max-width: 100%;
+  margin-top: 16px;
+  overflow: hidden;
+  color: dimgray;
+  font-size: 14px;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (width >= 768px) {
+  .cards-dynamic > ul {
+    justify-content: flex-start;
+  }
+
+  .cards-dynamic > ul > li {
+    padding-right: 14px;
+  }
+}

@@ -3,7 +3,7 @@
 
 // PARSER IMPORTS
 import columnsFeatureParser from './parsers/columns-feature.js';
-import cardsArticleParser from './parsers/cards-article.js';
+import cardsDynamicParser from './parsers/cards-dynamic.js';
 import cardsTeaserParser from './parsers/cards-teaser.js';
 
 // TRANSFORMER IMPORTS
@@ -13,7 +13,7 @@ import sectionsTransformer from './transformers/wknd-sections.js';
 // PARSER REGISTRY
 const parsers = {
   'columns-feature': columnsFeatureParser,
-  'cards-article': cardsArticleParser,
+  'cards-dynamic': cardsDynamicParser,
   'cards-teaser': cardsTeaserParser,
 };
 
@@ -30,7 +30,7 @@ const PAGE_TEMPLATE = {
       instances: ['.teaser.cmp-teaser--featured'],
     },
     {
-      name: 'cards-article',
+      name: 'cards-dynamic',
       instances: ['.image-list.list'],
     },
     {
@@ -60,7 +60,7 @@ const PAGE_TEMPLATE = {
       name: 'All Articles',
       selector: '.image-list.list',
       style: null,
-      blocks: ['cards-article'],
+      blocks: ['cards-dynamic'],
       defaultContent: ['div.title.cmp-title--underline'],
     },
     {
