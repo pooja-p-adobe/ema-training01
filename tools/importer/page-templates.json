@@ -177,6 +177,62 @@
           ]
         }
       ]
+    },
+    {
+      "name": "wknd-adventures",
+      "urls": [
+        "https://wknd.site/us/en/adventures.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND Adventures listing page. Contains: H1 'Adventures' title (default content), an intro hero teaser ('Experience the world with us' — heading + text + image, reuses columns-feature), 'Current Adventures' heading, and a tabbed filter (All/Climbing/Cycling/Skiing/Surfing/Travel) wrapping a large adventure card grid (~13 cards, filterable by category) — NEW tabs-adventures variant.",
+      "blocks": [
+        {
+          "name": "columns-feature",
+          "instances": [
+            ".teaser.cmp-teaser--hero"
+          ]
+        },
+        {
+          "name": "tabs-adventures",
+          "instances": [
+            ".tabs.panelcontainer"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "adv-section-1",
+          "name": "Adventures Title",
+          "selector": "main.cmp-layout-container--fixed div.title",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.title"
+          ]
+        },
+        {
+          "id": "adv-section-2",
+          "name": "Intro Teaser",
+          "selector": ".teaser.cmp-teaser--hero",
+          "style": null,
+          "blocks": [
+            "columns-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "adv-section-3",
+          "name": "Current Adventures Tabs",
+          "selector": ".tabs.panelcontainer",
+          "style": null,
+          "blocks": [
+            "tabs-adventures"
+          ],
+          "defaultContent": [
+            "div.title.cmp-title--underline"
+          ]
+        }
+      ]
     }
   ]
 }
