@@ -2,7 +2,7 @@
 /* global WebImporter */
 
 // PARSER IMPORTS
-import accordionFaqParser from './parsers/accordion-faq.js';
+import accordionDynamicParser from './parsers/accordion-dynamic.js';
 
 // TRANSFORMER IMPORTS
 import cleanupTransformer from './transformers/wknd-cleanup.js';
@@ -10,7 +10,7 @@ import sectionsTransformer from './transformers/wknd-sections.js';
 
 // PARSER REGISTRY
 const parsers = {
-  'accordion-faq': accordionFaqParser,
+  'accordion-dynamic': accordionDynamicParser,
 };
 
 // PAGE TEMPLATE CONFIGURATION - Embedded from page-templates.json
@@ -22,7 +22,7 @@ const PAGE_TEMPLATE = {
   ],
   blocks: [
     {
-      name: 'accordion-faq',
+      name: 'accordion-dynamic',
       instances: ['.accordion.panelcontainer'],
     },
   ],
@@ -32,7 +32,7 @@ const PAGE_TEMPLATE = {
       name: 'FAQ Content',
       selector: '.accordion.panelcontainer',
       style: null,
-      blocks: ['accordion-faq'],
+      blocks: ['accordion-dynamic'],
       defaultContent: ['main div.title', 'div.image', 'div.text'],
     },
     {

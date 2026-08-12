@@ -1,0 +1,95 @@
+/*
+ * accordion-dynamic — WKND FAQ accordion (query-index driven).
+ * Mirrors accordion-faq styling (source .cmp-accordion on
+ * https://wknd.site/us/en/faqs.html) so the dynamic accordion is visually
+ * identical. Decorated DOM:
+ *   .accordion-dynamic > .accordion-dynamic-list >
+ *     details.accordion-dynamic-item >
+ *       summary.accordion-dynamic-item-label (question) +
+ *       div.accordion-dynamic-item-body (answer)
+ * Responsive: single-column list at every breakpoint (matches source); the
+ * question text wraps and the +/- indicator stays pinned right on mobile.
+ */
+
+.accordion-dynamic .accordion-dynamic-item {
+  border: 0;
+}
+
+.accordion-dynamic .accordion-dynamic-item + .accordion-dynamic-item {
+  margin-top: 0;
+}
+
+/* question header (clickable) */
+.accordion-dynamic .accordion-dynamic-item-label {
+  position: relative;
+  padding: 13px 46px 13px 21px;
+  border-bottom: 2px solid #ebebeb;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: #000;
+  transition: border-color 0.2s;
+}
+
+.accordion-dynamic .accordion-dynamic-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-dynamic .accordion-dynamic-item-label:focus-visible {
+  outline: 2px solid var(--text-color);
+  outline-offset: -2px;
+}
+
+/* expanded question loses its divider (answer flows directly below) */
+.accordion-dynamic .accordion-dynamic-item[open] .accordion-dynamic-item-label {
+  border-bottom-color: transparent;
+}
+
+/* +/- indicator — thin black plus that becomes a minus when open */
+.accordion-dynamic .accordion-dynamic-item-label::before,
+.accordion-dynamic .accordion-dynamic-item-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  background-color: #000;
+  transition: transform 0.2s ease;
+}
+
+/* horizontal bar (always visible) */
+.accordion-dynamic .accordion-dynamic-item-label::before {
+  width: 18px;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+/* vertical bar (collapses away when open, turning + into -) */
+.accordion-dynamic .accordion-dynamic-item-label::after {
+  right: 21px;
+  width: 2px;
+  height: 18px;
+  transform: translateY(-50%);
+}
+
+.accordion-dynamic .accordion-dynamic-item[open] .accordion-dynamic-item-label::after {
+  transform: translateY(-50%) scaleY(0);
+}
+
+/* answer panel */
+.accordion-dynamic .accordion-dynamic-item-body {
+  padding: 7px 0 0 7px;
+}
+
+.accordion-dynamic .accordion-dynamic-item-body p {
+  margin: 0 0 13.5px;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+  text-align: justify;
+  color: var(--text-color);
+}
