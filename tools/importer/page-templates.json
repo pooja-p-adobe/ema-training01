@@ -317,6 +317,102 @@
           ]
         }
       ]
+    },
+    {
+      "name": "wknd-adventure-detail",
+      "urls": [
+        "https://wknd.site/us/en/adventures/bali-surf-camp.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND adventure detail page (16 pages). Breadcrumb + hero banner image + H1 title (default content), adventure-details spec-list (Activity/Adventure Type/Trip Length/Group Size/Difficulty/Price), Share row (default content), and tabs-content (Overview/Itinerary/What to Bring rich panels).",
+      "blocks": [
+        {
+          "name": "adventure-details",
+          "instances": [
+            "article.cmp-contentfragment dl.cmp-contentfragment__elements"
+          ]
+        },
+        {
+          "name": "tabs-content",
+          "instances": [
+            ".tabs.panelcontainer"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "adv-d-1",
+          "name": "Hero + Title",
+          "selector": ".carousel.cmp-carousel--mini",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".cmp-breadcrumb",
+            "main h1"
+          ]
+        },
+        {
+          "id": "adv-d-2",
+          "name": "Adventure Details",
+          "selector": "article.cmp-contentfragment dl.cmp-contentfragment__elements",
+          "style": null,
+          "blocks": [
+            "adventure-details"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "adv-d-3",
+          "name": "Trip Content Tabs",
+          "selector": ".tabs.panelcontainer",
+          "style": null,
+          "blocks": [
+            "tabs-content"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "wknd-magazine-article",
+      "urls": [
+        "https://wknd.site/us/en/magazine/arctic-surfing.html"
+      ],
+      "coverageGaps": [],
+      "description": "WKND magazine article detail (5+ pages). Breadcrumb + H1 + byline + rich article body (paragraphs, h2 subheadings, blockquote, inline images) as default content; author bio reuses cards-profile; Share/related-stories as default content.",
+      "blocks": [
+        {
+          "name": "cards-profile",
+          "instances": [
+            "div.byline"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "mag-a-1",
+          "name": "Article Body",
+          "selector": "main article.cmp-contentfragment",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            ".cmp-breadcrumb",
+            "main h1",
+            "main h4",
+            "main article"
+          ]
+        },
+        {
+          "id": "mag-a-2",
+          "name": "Author Bio",
+          "selector": "div.byline",
+          "style": null,
+          "blocks": [
+            "cards-profile"
+          ],
+          "defaultContent": []
+        }
+      ]
     }
   ]
 }

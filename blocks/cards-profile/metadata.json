@@ -37,9 +37,9 @@
     ]
   },
   "usage": {
-    "pagesUsing": ["/us/en/about-us"],
-    "reuseCount": 1,
+    "pagesUsing": ["/us/en/about-us", "/us/en/magazine/arctic-surfing"],
+    "reuseCount": 2,
     "instancesOnPage": 2,
-    "lastUsed": "2026-08-12T08:15:00.000Z"
+    "lastUsed": "2026-08-20T00:00:00.000Z"
   }
 }
