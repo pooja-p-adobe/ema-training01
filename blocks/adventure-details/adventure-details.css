@@ -1,0 +1,41 @@
+/* adventure-details — WKND adventure spec key/value list.
+ * Mirrors the source .cmp-contentfragment__elements look: each spec has a
+ * small uppercase label, the value below it, and a left accent rule.
+ */
+
+.adventure-details .adventure-details-list {
+  margin: 0;
+  padding: 0;
+}
+
+.adventure-details .adventure-details-item {
+  margin: 0 0 24px;
+  padding-left: 16px;
+  border-left: 3px solid var(--wknd-cta-bg, #ffea00);
+}
+
+.adventure-details .adventure-details-label {
+  margin: 0;
+  color: #696969;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.adventure-details .adventure-details-value {
+  margin: 4px 0 0;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  text-transform: uppercase;
+}
+
+.adventure-details .adventure-details-value a {
+  color: inherit;
+  text-decoration: underline;
+}

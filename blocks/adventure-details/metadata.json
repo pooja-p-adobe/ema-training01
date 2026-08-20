@@ -1,0 +1,41 @@
+{
+  "variantName": "adventure-details",
+  "baseBlock": "adventure-details",
+  "version": "1.0.0",
+  "created": "2026-08-20T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en/adventures/bali-surf-camp.html",
+    "originPage": "WKND adventure detail (Bali Surf Camp)",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "spec-list",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "one row per spec = [label] [value]; renders as a definition list with uppercase label, value below, left accent rule",
+    "buttonCount": 0,
+    "imageCount": 0,
+    "rowCount": 6
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "adventure/product/trip specification lists (Activity, Trip Length, Group Size, Difficulty, Price, ...)",
+      "any label/value fact sheet where each pair is stacked with a small uppercase label and a prominent value",
+      "content-fragment-style key/value detail panels"
+    ],
+    "notSuitableFor": [
+      "tabular data with multiple columns per row (use table)",
+      "side-by-side image + text feature layouts (use columns-feature)",
+      "repeating card grids (use cards variants)"
+    ]
+  },
+  "note": "Genuinely new pattern with no vanilla base block. Custom block authored by hand following existing WKND block conventions (imports nothing beyond DOM APIs; no fetchPlaceholders/moveInstrumentation).",
+  "usage": {
+    "pagesUsing": ["/us/en/adventures/bali-surf-camp"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-20T00:00:00.000Z"
+  }
+}
